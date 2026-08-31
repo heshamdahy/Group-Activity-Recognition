@@ -74,8 +74,8 @@ Following the standard B1 image-classification baseline approach:
 | **Two-stage Hierarchical Model** | **81.9** |
 
 ## Tools
--python
--pytorch
+- python
+- pytorch
 
 ## Next Steps
 
