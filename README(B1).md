@@ -9,7 +9,6 @@ This project tackles group activity recognition on the [Volleyball Dataset](http
 ## Status
 
 - ✅ Data pipeline: annotation parsing, bounding box loading, pickle-based caching
-- ✅ ResNet50 feature extraction from player crops across 41-frame windows
 - ✅ First baseline: trained at the **image level**
 - ⬜ Next baseline: fine-tune at the **player level**
 - ⬜ Hierarchical LSTM (person-level → group-level) stage
@@ -75,10 +74,8 @@ Following the standard B1 image-classification baseline approach:
 | **Two-stage Hierarchical Model** | **81.9** |
 
 ## Tools
-
-- Google Colab (GPU runtime)
-- ResNet50 (pretrained backbone, fine-tuned)
-- Weights & Biases for experiment tracking (loss/accuracy curves)
+-python
+-pytorch
 
 ## Next Steps
 
