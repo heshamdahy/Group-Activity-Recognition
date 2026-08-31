@@ -48,15 +48,15 @@ Following the standard B1 image-classification baseline approach:
 
 **Train Accuracy**
 
-![Train Accuracy](train_accuracy.png)
+![Train Accuracy](Accuracy_Train.png)
 
 **Validation Accuracy**
 
-![Validation Accuracy](val_accuracy.png)
+![Validation Accuracy](Accuracy_Val.png)
 
 **Train Loss**
 
-![Train Loss](train_loss.png)
+![Loss](loss.png)
 
 > Train accuracy is high while val accuracy is much lower and noisy — a sign of overfitting at the image level, which the player-level and temporal baselines below aim to address.
 
