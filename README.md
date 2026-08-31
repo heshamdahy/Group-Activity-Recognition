@@ -1,1 +1,1 @@
-** Group Activity Recognition Project
+## Group Activity Recognition Project
