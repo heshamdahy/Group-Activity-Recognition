@@ -226,7 +226,7 @@ def train_baseline_image_classifier(epochs,start_epoch):
          correct+=(pred==label).sum().item()
          total+=label.size(0)
 
-      schedular.step()
+      
       
       print(f'epoch: {epoch+1} ----> loss: {total_loss/len(train_dataloader)} ----> Accuracy/train:{(100*correct)/total}   ')
       if (epoch+1)%20==0:
