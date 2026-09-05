@@ -1,7 +1,3 @@
-# Generated from: group-activity-classification-b3 (2).ipynb
-# Converted at: 2026-09-05T17:59:55.852Z
-# Next step (optional): refactor into modules & generate tests with RunCell
-# Quick start: pip install runcell
 
 import torch
 import torch.nn as nn
