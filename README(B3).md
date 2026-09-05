@@ -71,13 +71,12 @@ It still sits, as expected, below the paper's full two-stage hierarchical model 
 ## 5. Tools & Stack
 
 - **Python** — primary language
-- **PyTorch** — model definition, training, and inference (`torch.utils.data.Dataset` / `DataLoader`, `torchvision.models.resnet50` as the backbone)
+- **PyTorch** — model definition, training, and inference 
 - **OpenCV (`cv2`)** — reading frames, drawing boxes/labels, writing the prediction video
 - **Pillow (`PIL`)** — cropping player images from frames during data loading
 - **NumPy** — feature pooling (max-pool over per-player vectors)
-- **Weights & Biases (`wandb`)** — experiment tracking for training runs
 - **Google Colab / Kaggle** — training and experimentation environment
-- **PyCharm** — local development
+
 
 ## 6. Pipeline Overview
 
@@ -95,22 +94,6 @@ flowchart LR
 
 **Flow in words:** a frame's player boxes are cropped → each crop goes through the fine-tuned person classifier, giving both a per-player action prediction and a 2048-d feature vector → all players' feature vectors are max-pooled into one clip-level vector → that vector is classified by the group NN → the final outputs are (1) a per-player action label on each box and (2) one group-activity label for the whole image.
 
-## 7. Repo structure (suggested)
-
-```
-.
-├── data/
-│   └── volleyball_annot_loader.py   # track_crop, track_data, track_boxes, track_meta_data
-├── datasets/
-│   └── volleyball_dataset.py        # `volleyball` PyTorch Dataset class
-├── models/
-│   ├── person_classifier.py         # B3-A: fine-tuned ResNet50, 9-class head
-│   └── group_classifier.py          # B3-C: NN over pooled 2048-d features, 8-class head
-├── train_person_classifier.py
-├── train_group_classifier.py
-├── render_predictions_video.py      # per-player + whole-image prediction video
-└── README.md
-```
 
 ## 8. Citation
 
